@@ -98,12 +98,13 @@ Active learning aims to reduce the number of training instances. In contrast to 
 
 ## Exemple d'usage
 
-Ollion & Boaelart : classifier les résumés d'articles en sociologie mobilisant des notions relevant du *genre*.
+Ollion & Boelaert : *La place du genre dans les sciences sociales*
 
 :::: {.columns}
 
 ::: {.column width="50%"}
 
+- À partir des résumés
 - 115 revues, 47 000+ articles
 - Annotation > 1k éléments
 - Qualité (F1) > 0.9
@@ -142,7 +143,7 @@ Consolider l'architecture
 
 Projet > données > annotations > modèle > prédictions
 
-![](img/active_tigger.png){height="100%"}
+![](img/active_tigger.png)
 
 ## Démo - AT en version beta
 
