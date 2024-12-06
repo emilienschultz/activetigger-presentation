@@ -10,7 +10,7 @@
 <link href="slides_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
-  <meta name="author" content="Émilien Schultz - Étienne Ollion - Julien Boelaert">
+  <meta name="author" content="Émilien Schultz - Julien Boelaert - Étienne Ollion">
   <title>Active Tigger</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -332,7 +332,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Émilien Schultz - Étienne Ollion - Julien Boelaert 
+Émilien Schultz - Julien Boelaert - Étienne Ollion 
 </div>
 </div>
 </div>
@@ -341,81 +341,69 @@
 <section id="constat-de-départ" class="slide level2">
 <h2>Constat de départ</h2>
 <ul>
-<li>Croissance des pratiques numériques en sciences sociales
+<li><em>Croissance</em> des pratiques numériques en sciences sociales
 <ul>
 <li>Importance d’outiller / clarifier ces dimensions CSS</li>
 </ul></li>
-<li>Arrivée des modèles de language dans la représentation/prédiction
+<li><em>Abondance</em> de données textuelles
+<ul>
+<li>Coût important (humain/argent)</li>
+<li>Corpus déséquilibrés (événements rares)</li>
+</ul></li>
+<li>Arrivée des <em>modèles pré-entraînés</em>
 <ul>
 <li>Transformers (BERT en 2018)</li>
-</ul></li>
-<li>Volume croissant de données textuelles
-<ul>
-<li>Coût important (humain/argent) pour produire les annotations</li>
-<li>Notamment pour les corpus déséquilibrés (événements rares)</li>
+<li>(update) le zéro-shot et les modèles multi-tâches</li>
 </ul></li>
 </ul>
 </section>
-<section id="update-lexplosion-des-usages-avec-les-llm" class="slide level2">
-<h2>(update) L’explosion des usages avec les LLM</h2>
+<section id="lien-avec-le-chercheur-augmentéaugmented" class="slide level2">
+<h2>Lien avec “le chercheur augmenté”<sup>1</sup></h2>
 <ul>
-<li>Multiplication des modèles pré-entraînés &amp; de leurs usages
-<ul>
-<li>Notamment modèles fondationnels multi-tâches</li>
-</ul></li>
-<li>De nouveaux usages impliquant des API / LLM comme service</li>
+<li><em>Déléguer</em> les tâches automatisables avec une qualité suffisante</li>
+<li><em>Étendre</em> sur des corpus plus larges</li>
+<li><em>Accompagner</em> les bonnes pratiques dans des outils</li>
 </ul>
-</section>
-<section id="lien-avec-le-chercheur-augmenté" class="slide level2">
-<h2>Lien avec “le chercheur augmenté”</h2>
-<ul>
-<li>Etendre les pratiques actuelles sur des corpus plus larges</li>
-<li>Déléguer les tâches automatisables</li>
-<li>Incorporer dans des outils les bonnes pratiques</li>
-</ul>
-<p><strong>Objectif</strong> : Fiabiliser et faciliter l’annotation textuelle</p>
-</section>
+<blockquote>
+<p>« The experiment yields a clear conclusion to both questions. Even on complex tasks, a well-trained supervised model using sequential learning can equal, and sometimes even surpass human annotation » [Do et al., 2022, p.&nbsp;6]</p>
+</blockquote>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Do, Salomé, Etienne Ollion, et Rubing Shen. «&nbsp;The Augmented Social Scientist&nbsp;». Sociological Methods and Research, 2022.</p></li></ol></aside></section>
 <section id="active-tigger-logiciel-open-source-pour-la-recherche-en-shs" class="slide level2">
 <h2>Active Tigger : logiciel open source pour la recherche en SHS</h2>
 <ul>
 <li>Tâches principales :
 <ul>
-<li><strong>Faciliter l’annotation multi-classes de corpus textuels</strong></li>
-<li><strong>Accélérer cette annotation sur de grands corpus textuels</strong></li>
+<li><strong>Faciliter</strong> l’annotation multi-classes de corpus textuels (heuristique)</li>
+<li><strong>Accélérer</strong> cette annotation sur de grands corpus textuels (active)</li>
 </ul></li>
 <li>Tâches secondaires :
 <ul>
-<li>Explorer un corpus textuel</li>
+<li>Explorer un corpus abondant</li>
 <li>Collaborer sur l’annotation</li>
 <li>Faciliter la stabilisation des schèmes de codage</li>
-<li>Accélérer la constitution de sous-corpus en situation d’abondance de données</li>
-</ul></li>
-<li>Tâches du future :
-<ul>
-<li>Intégrer les modèles génératifs</li>
+<li>Accélérer la constitution de sous-corpus</li>
 </ul></li>
 </ul>
 </section>
-<section id="valeurs-structurantes-du-projet" class="slide level2">
-<h2>Valeurs structurantes du projet</h2>
+<section id="valeurs-structurantes-du-projet-ss" class="slide level2">
+<h2>Valeurs structurantes du projet <sup>1</sup></h2>
 <ul>
 <li>Open source &amp; Open Science</li>
 <li>Logiciel scientifique</li>
 <li>Transparent / reproductible</li>
-<li>Equilibre entre guider le jugement et la modularité</li>
-<li>Evolutif / plateforme</li>
+<li>Équilibre entre normativité &amp; modularité</li>
+<li>Ancré dans la recherche (évolutif)</li>
 </ul>
-<p><em>« models and software are entangled in science, and software does critical work that models cannot perform on their own » [Hocquet et al., 2024, p.&nbsp;465]</em></p>
-</section>
-<section id="choix-techniques" class="slide level2">
-<h2>Choix techniques</h2>
+<aside><ol class="aside-footnotes"><li id="fn2"><p><em>« models and software are entangled in science, and software does critical work that models cannot perform on their own » [Hocquet et al., 2024, p.&nbsp;465]</em></p></li></ol></aside></section>
+<section id="choix-techniques-actuels" class="slide level2">
+<h2>Choix techniques actuels</h2>
 <ul>
-<li>Se concentrer sur quelques tâches</li>
-<li>Une trajectoire principale avec de l’<a href="https://en.wikipedia.org/wiki/Active_learning_(machine_learning)">active learning</a>
+<li>Tâches délimitées</li>
+<li>Implémenter une méthode <a href="https://en.wikipedia.org/wiki/Active_learning_(machine_learning)">active learning</a>
 <ul>
-<li>Accélérer l’annotation de certains éléments cibles (boucle d’AL)</li>
-<li>Pour ensuite fine-tuner un modèle BERT</li>
-<li>Etendre l’annotation au corpus entier</li>
+<li>Annotation avec boucle d’AL</li>
+<li>Fine-tune BERT + rétroaction (&gt; zero-shot, cf.&nbsp;Chae &amp; Davidson, 2023)</li>
+<li>Étendre sur le corpus entier</li>
 </ul></li>
 </ul>
 <div title="Active Learning">
@@ -437,24 +425,51 @@
 <section id="précisions" class="slide level2">
 <h2>Précisions</h2>
 <ul>
-<li>Plongement des textes avec SBERT / autre</li>
-<li>Un AL adapté :
+<li>Transformer le texte en features
+<ul>
+<li>Plongement SBERT / autre</li>
+</ul></li>
+<li>AL adapté :
 <ul>
 <li>Modèle frugal (ML classique) avec réintégration des prédictions</li>
 <li>Petits batch</li>
 </ul></li>
+<li>Calcul de métriques et décisions laissés à l’utilisateur</li>
 </ul>
 </section>
-<section id="implémetation-premier-prototype-rshiny-en-2022" class="slide level2">
-<h2>Implémetation : premier prototype RShiny en 2022</h2>
-
-<img data-src="img/atr.png" class="r-stretch quarto-figure-center"><p class="caption">ActiveTigger</p><p><a href="https://gitlab.univ-lille.fr/julien.boelaert/activetigger">https://gitlab.univ-lille.fr/julien.boelaert/activetigger</a></p>
+<section id="implémentation-prototype-rshiny-2022atshiny" class="slide level2">
+<h2>Implémentation : prototype RShiny 2022<sup>1</sup></h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Produire un classifieur pour un très grand corpus</li>
+<li>Récupérer uniquement certains éléments dans un grand corpus</li>
+<li>Accélérer le codage exhaustif d’un corpus (avec la boucle AL)</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="img/atr.png"></p>
+</div></div>
+<aside><ol class="aside-footnotes"><li id="fn3"><p>https://gitlab.univ-lille.fr/julien.boelaert/activetigger</p></li></ol></aside></section>
+<section id="exemple-dusage" class="slide level2">
+<h2>Exemple d’usage</h2>
+<p>Ollion &amp; Boaelart : classifier les résumés d’articles en sociologie mobilisant des notions relevant du <em>genre</em>.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>115 revues, 47 000+</li>
+<li>Annotation O(1k) éléments</li>
+<li>Classifieur f1 &gt; 0.9</li>
+<li>Prédiction sur le corpus</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="img/evogenre.png"></p>
+</div></div>
 </section>
 <section id="depuis-2024-refactorisation" class="slide level2">
 <h2>Depuis 2024 : refactorisation</h2>
 <p>Consolider l’architecture</p>
 <ul>
-<li>Ajouter du vrai multiutilisateur</li>
+<li>Ajouter du multiutilisateur</li>
 <li>Avoir un backend en Python</li>
 <li>Aller au-delà du prototypage</li>
 </ul>
@@ -476,76 +491,81 @@
 </div>
 </div>
 </div>
+<p><em>Un chantier encore en cours</em></p>
 </section>
-<section id="démonstration" class="slide level2">
-<h2>Démonstration</h2>
+<section id="structure" class="slide level2">
+<h2>Structure</h2>
+<p>Projet &gt; données &gt; annotations &gt; modèle &gt; prédictions</p>
+
+<img data-src="img/diagram.png" class="r-stretch"></section>
+<section id="démo---at-en-version-beta" class="slide level2">
+<h2>Démo - AT en version beta</h2>
 <ul>
-<li>Une instance sur nos serveurs</li>
-<li>Un jeu de données
-<ul>
-<li>Abstracts de journaux sociologie</li>
-<li>Article à paraître d’Étienne &amp; Julien sur le traitement de la question de genre</li>
-</ul></li>
+<li>Une instance sur nos serveurs (GENES)</li>
+<li>Un jeu de données Genre</li>
+<li>Faire le tour des outils</li>
 </ul>
-<p><a href="https://emilienschultz.github.io/activetiggers"><strong>go go démo</strong></a></p>
+<center>
+<a href="https://emilienschultz.github.io/activetigger"><strong>go go démo</strong> ✅</a>
+</center>
 </section>
 <section id="les-évolutions-actuelles-et-futures" class="slide level2">
 <h2>Les évolutions actuelles et futures</h2>
 <ul>
+<li>Établir des comparatifs</li>
 <li>Intégrer au mieux les bonnes pratiques de constitution de corpus (Klie et al., 2024)</li>
-<li>D’autres principes d’Active learning ? (i.e.&nbsp;batch diversity)</li>
-<li>Connecteurs avec les LLM as a service</li>
+<li>Connecteurs avec les LLM-as-a-service
+<ul>
+<li>Prompt pour annoter</li>
+<li>Règles de correction</li>
+</ul></li>
+<li>Autres modèles à fine-tuner (<a href="https://arxiv.org/abs/2404.14219">Phi3</a>) ?</li>
 </ul>
 </section>
-<section id="comment-tester" class="slide level2">
-<h2>Comment tester ?</h2>
-<ul>
-<li>Possibilité de tester
-<ul>
-<li>Me demander un accès à emilien.schultz@ensae.fr</li>
-</ul></li>
-<li>Code ouvert - mais encore en développement</li>
-</ul>
+<section id="vous-voulez-tester-super" class="slide level2">
+<h2>Vous voulez tester ? Super !</h2>
+<center>
+<img data-src="img/betatest2.jpg">
+</center>
 </section>
 <section id="comment-contribuer" class="slide level2">
 <h2>Comment contribuer ?</h2>
 <ul>
+<li><a href="https://github.com/emilienschultz/activetigger/">Github de Active Tigger</a></li>
 <li>Ouvrir des issues</li>
 <li>Entrer dans le code
 <ul>
-<li>Possibilité d’échanger</li>
+<li>Inboarding possible</li>
 </ul></li>
+<li><strong>Quelles features à ajouter ?</strong></li>
 </ul>
 </section>
 <section id="quelques-références" class="slide level2">
 <h2>Quelques références</h2>
 <ul>
-<li>Ein-Dor, Liat, Alon Halfon, Ariel Gera, Eyal Shnarch, Lena Dankin, Leshem Choshen, Marina Danilevsky, Ranit Aharonov, Yoav Katz, et Noam Slonim. «&nbsp;Active Learning for BERT: An Empirical Study&nbsp;». In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP), 7949‑62. Online: Association for Computational Linguistics, 2020. https://doi.org/10.18653/v1/2020.emnlp-main.638.</li>
-<li>Zhang, Zhisong, Emma Strubell, et Eduard Hovy. «&nbsp;A Survey of Active Learning for Natural Language Processing&nbsp;». arXiv, 3 février 2023. http://arxiv.org/abs/2210.10109/</li>
-<li>Klie, Jan-Christoph, Richard Eckart De Castilho, et Iryna Gurevych. «&nbsp;Analyzing Dataset Annotation Quality Management in the Wild&nbsp;». Computational Linguistics 50, nᵒ 3 (1 septembre 2024): 817‑66. https://doi.org/10.1162/coli_a_00516.</li>
+<li>Ein-Dor, Liat, Alon Halfon, […] Noam Slonim. «&nbsp;Active Learning for BERT: An Empirical Study&nbsp;». In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP), 7949‑62. Online: Association for Computational Linguistics, 2020.</li>
+<li>Zhang, Zhisong, Emma Strubell, et Eduard Hovy. «&nbsp;A Survey of Active Learning for Natural Language Processing&nbsp;». arXiv, 3 février 2023.</li>
+<li>Klie, Jan-Christoph, Richard Eckart De Castilho, et Iryna Gurevych. «&nbsp;Analyzing Dataset Annotation Quality Management in the Wild&nbsp;». Computational Linguistics 50, nᵒ 3 (1 septembre 2024): 817‑66.</li>
+<li>Chae, Youngjin, et Thomas Davidson. «&nbsp;Large Language Models for Text Classification: From Zero-Shot Learning to Instruction-Tuning&nbsp;», 24 août 2023.</li>
 </ul>
 </section>
-<section id="contributors" class="slide level2">
-<h2>Contributors</h2>
-<p>www.css.cnrs.fr</p>
+<section id="contributeurs" class="slide level2">
+<h2>Contributeurs</h2>
+<p>Financement : GENES / DRARI / Progédo</p>
 <ul>
+<li>Julien Boaelaert</li>
+<li>Étienne Ollion</li>
+<li>Paul Girard (OuestWare)</li>
 <li>Emma Bonutti</li>
 <li>Léo Mignot</li>
 </ul>
-<p>Un discord bientôt</p>
+<p><a href="www.css.cnrs.fr">www.css.cnrs.fr</a></p>
 <!-- 
-
 Keywords
 - multiclass classification
 - active learning
 - open source
 - open science
-
-(situations in which unlabeled data is abundant but manual labeling is expensive)
-
-*En chantier : intégrer les modèles génératifs*
-
-Many text classification tasks face a severe class imbalance problem that limits the ability to train high-performance models.
 -->
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -553,6 +573,7 @@ Many text classification tasks face a severe class imbalance problem that limits
 </div>
 </div>
 </section>
+
     </div>
   </div>
 
