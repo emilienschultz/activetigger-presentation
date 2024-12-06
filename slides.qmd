@@ -20,13 +20,13 @@ format:
     - Transformers (BERT en 2018)
     - (update) le zéro-shot et les modèles multi-tâches
 
-## Lien avec "le chercheur augmenté"[^augmented]
+## S'augmenter"[^augmented]
 
 - *Déléguer* les tâches automatisables avec une qualité suffisante
 - *Étendre* sur des corpus plus larges
 - *Accompagner* les bonnes pratiques dans des outils
 
-> « The experiment yields a clear conclusion to both questions. Even on complex tasks, a well-trained supervised model using sequential learning can equal, and sometimes even surpass human annotation » [Do et al., 2022, p. 6]
+> « Even on complex tasks, a well-trained supervised model [...] can equal, and sometimes even surpass human annotation » [Do et al., 2022, p. 6]
 
 [^augmented]: Do, Salomé, Etienne Ollion, et Rubing Shen. « The Augmented Social Scientist ». Sociological Methods and Research, 2022.
 
@@ -41,7 +41,7 @@ format:
     - Faciliter la stabilisation des schèmes de codage
     - Accélérer la constitution de sous-corpus
 
-## Valeurs structurantes du projet [^ss]
+## Valeurs structurantes du projet
 
 - Open source & Open Science
 - Logiciel scientifique
@@ -49,14 +49,14 @@ format:
 - Équilibre entre normativité & modularité
 - Ancré dans la recherche (évolutif)
 
-[^ss]: *« models and software are entangled in science, and software does critical work that models cannot perform on their own » [Hocquet et al., 2024, p. 465]*
+> *« models and software are entangled in science, and software does critical work that models cannot perform on their own » [Hocquet et al., 2024, p. 465]*
 
 ## Choix techniques actuels
 
 - Tâches délimitées
 - Implémenter une méthode [active learning](https://en.wikipedia.org/wiki/Active_learning_(machine_learning))
     - Annotation avec boucle d'AL
-    - Fine-tune BERT + rétroaction (> zero-shot, cf. Chae & Davidson, 2023)
+    - Fine-tune BERT + rétroaction (> zero-shot, cf. Chae & Davidson, 2024)
     - Étendre sur le corpus entier
 
 ::: {.callout-note title="Active Learning"}
@@ -104,11 +104,12 @@ Ollion & Boaelart : classifier les résumés d'articles en sociologie mobilisant
 
 ::: {.column width="50%"}
 
-- 115 revues, 47 000+
-- Annotation O(1k) éléments
-- Classifieur f1 > 0.9
-- Prédiction sur le corpus
+- 115 revues, 47 000+ articles
+- Annotation > 1k éléments
+- Qualité (F1) > 0.9
+- Prédiction sur le corpus complet
 :::
+
 
 ::: {.column width="50%"}
 ![](img/evogenre.png)
@@ -116,6 +117,9 @@ Ollion & Boaelart : classifier les résumés d'articles en sociologie mobilisant
 
 ::::
 
+##
+
+![](img/genrerevues.png)
 
 ## Depuis 2024 : refactorisation
 
@@ -138,7 +142,7 @@ Consolider l'architecture
 
 Projet > données > annotations > modèle > prédictions
 
-![](img/diagram.png)
+![](img/active_tigger.png){height="100%"}
 
 ## Démo - AT en version beta
 
@@ -154,7 +158,7 @@ Projet > données > annotations > modèle > prédictions
 
 - Établir des comparatifs
 - Intégrer au mieux les bonnes pratiques de constitution de corpus (Klie et al., 2024)
-- Connecteurs avec les LLM-as-a-service
+- Intégrer les LLM-as-a-service
     - Prompt pour annoter
     - Règles de correction
 - Autres modèles à fine-tuner ([Phi3](https://arxiv.org/abs/2404.14219)) ?
@@ -162,7 +166,7 @@ Projet > données > annotations > modèle > prédictions
 ## Vous voulez tester ? Super !
 
 <center>
-![](img/betatest2.jpg)
+![](img/betatest2.jpg){width="50%"}
 </center>
 
 ## Comment contribuer ?

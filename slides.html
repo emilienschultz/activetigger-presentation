@@ -357,15 +357,15 @@
 </ul></li>
 </ul>
 </section>
-<section id="lien-avec-le-chercheur-augmentéaugmented" class="slide level2">
-<h2>Lien avec “le chercheur augmenté”<sup>1</sup></h2>
+<section id="saugmenteraugmented" class="slide level2">
+<h2>S’augmenter”<sup>1</sup></h2>
 <ul>
 <li><em>Déléguer</em> les tâches automatisables avec une qualité suffisante</li>
 <li><em>Étendre</em> sur des corpus plus larges</li>
 <li><em>Accompagner</em> les bonnes pratiques dans des outils</li>
 </ul>
 <blockquote>
-<p>« The experiment yields a clear conclusion to both questions. Even on complex tasks, a well-trained supervised model using sequential learning can equal, and sometimes even surpass human annotation » [Do et al., 2022, p.&nbsp;6]</p>
+<p>« Even on complex tasks, a well-trained supervised model […] can equal, and sometimes even surpass human annotation » [Do et al., 2022, p.&nbsp;6]</p>
 </blockquote>
 <aside><ol class="aside-footnotes"><li id="fn1"><p>Do, Salomé, Etienne Ollion, et Rubing Shen. «&nbsp;The Augmented Social Scientist&nbsp;». Sociological Methods and Research, 2022.</p></li></ol></aside></section>
 <section id="active-tigger-logiciel-open-source-pour-la-recherche-en-shs" class="slide level2">
@@ -385,8 +385,8 @@
 </ul></li>
 </ul>
 </section>
-<section id="valeurs-structurantes-du-projet-ss" class="slide level2">
-<h2>Valeurs structurantes du projet <sup>1</sup></h2>
+<section id="valeurs-structurantes-du-projet" class="slide level2">
+<h2>Valeurs structurantes du projet</h2>
 <ul>
 <li>Open source &amp; Open Science</li>
 <li>Logiciel scientifique</li>
@@ -394,7 +394,10 @@
 <li>Équilibre entre normativité &amp; modularité</li>
 <li>Ancré dans la recherche (évolutif)</li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn2"><p><em>« models and software are entangled in science, and software does critical work that models cannot perform on their own » [Hocquet et al., 2024, p.&nbsp;465]</em></p></li></ol></aside></section>
+<blockquote>
+<p><em>« models and software are entangled in science, and software does critical work that models cannot perform on their own » [Hocquet et al., 2024, p.&nbsp;465]</em></p>
+</blockquote>
+</section>
 <section id="choix-techniques-actuels" class="slide level2">
 <h2>Choix techniques actuels</h2>
 <ul>
@@ -402,7 +405,7 @@
 <li>Implémenter une méthode <a href="https://en.wikipedia.org/wiki/Active_learning_(machine_learning)">active learning</a>
 <ul>
 <li>Annotation avec boucle d’AL</li>
-<li>Fine-tune BERT + rétroaction (&gt; zero-shot, cf.&nbsp;Chae &amp; Davidson, 2023)</li>
+<li>Fine-tune BERT + rétroaction (&gt; zero-shot, cf.&nbsp;Chae &amp; Davidson, 2024)</li>
 <li>Étendre sur le corpus entier</li>
 </ul></li>
 </ul>
@@ -449,22 +452,26 @@
 </div><div class="column" style="width:60%;">
 <p><img data-src="img/atr.png"></p>
 </div></div>
-<aside><ol class="aside-footnotes"><li id="fn3"><p>https://gitlab.univ-lille.fr/julien.boelaert/activetigger</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>https://gitlab.univ-lille.fr/julien.boelaert/activetigger</p></li></ol></aside></section>
 <section id="exemple-dusage" class="slide level2">
 <h2>Exemple d’usage</h2>
 <p>Ollion &amp; Boaelart : classifier les résumés d’articles en sociologie mobilisant des notions relevant du <em>genre</em>.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li>115 revues, 47 000+</li>
-<li>Annotation O(1k) éléments</li>
-<li>Classifieur f1 &gt; 0.9</li>
-<li>Prédiction sur le corpus</li>
+<li>115 revues, 47 000+ articles</li>
+<li>Annotation &gt; 1k éléments</li>
+<li>Qualité (F1) &gt; 0.9</li>
+<li>Prédiction sur le corpus complet</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><img data-src="img/evogenre.png"></p>
 </div></div>
 </section>
+<section id="section" class="slide level2">
+<h2></h2>
+
+<img data-src="img/genrerevues.png" class="r-stretch"></section>
 <section id="depuis-2024-refactorisation" class="slide level2">
 <h2>Depuis 2024 : refactorisation</h2>
 <p>Consolider l’architecture</p>
@@ -496,8 +503,8 @@
 <section id="structure" class="slide level2">
 <h2>Structure</h2>
 <p>Projet &gt; données &gt; annotations &gt; modèle &gt; prédictions</p>
-
-<img data-src="img/diagram.png" class="r-stretch"></section>
+<p><img data-src="img/active_tigger.png" style="height:100.0%"></p>
+</section>
 <section id="démo---at-en-version-beta" class="slide level2">
 <h2>Démo - AT en version beta</h2>
 <ul>
@@ -514,7 +521,7 @@
 <ul>
 <li>Établir des comparatifs</li>
 <li>Intégrer au mieux les bonnes pratiques de constitution de corpus (Klie et al., 2024)</li>
-<li>Connecteurs avec les LLM-as-a-service
+<li>Intégrer les LLM-as-a-service
 <ul>
 <li>Prompt pour annoter</li>
 <li>Règles de correction</li>
@@ -525,7 +532,7 @@
 <section id="vous-voulez-tester-super" class="slide level2">
 <h2>Vous voulez tester ? Super !</h2>
 <center>
-<img data-src="img/betatest2.jpg">
+<img data-src="img/betatest2.jpg" style="width:50.0%">
 </center>
 </section>
 <section id="comment-contribuer" class="slide level2">
