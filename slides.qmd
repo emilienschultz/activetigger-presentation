@@ -143,7 +143,7 @@ Consolider l'architecture
 
 Projet > données > annotations > modèle > prédictions
 
-![](img/active_tigger.png)
+![](img/at_diagram.png)
 
 ## Démo - AT en version beta
 
@@ -155,19 +155,32 @@ Projet > données > annotations > modèle > prédictions
 [**go go démo** ✅](https://emilienschultz.github.io/activetigger)
 </center>
 
-## Les évolutions actuelles et futures
+##
 
-- Établir des comparatifs
-- Intégrer au mieux les bonnes pratiques de constitution de corpus (Klie et al., 2024)
-- Intégrer les LLM-as-a-service
-    - Prompt pour annoter
-    - Règles de correction
-- Autres modèles à fine-tuner ([Phi3](https://arxiv.org/abs/2404.14219)) ?
+![](img/at_annotate.png)
+
+## Roadmap scientifique
+
+- LLM-as-a-service (prompts & rectification)
+- Bonnes pratiques de constitution de corpus (Klie et al., 2024)
+- Étendre les modèles ([Phi3](https://arxiv.org/abs/2404.14219)) ?
+- Différencier les rôles (recherche/annotation)
+- Établir des comparatifs avec d'autres méthodes
+
+## Roadmap technique
+
+- Gestion mémoire GPU (leak & limites)
+- Améliorer les visualisations
+- Améliorer design/chart graphique
+- Écrire la documentation
+- Migration PostGreSQL
+- Meilleure gestion des processus (Celery)
+- Dockeriser
 
 ## Vous voulez tester ? Super !
 
 <center>
-![](img/betatest2.jpg){width="50%"}
+![](img/betatest2.jpg){height="500px"}
 </center>
 
 ## Comment contribuer ?
