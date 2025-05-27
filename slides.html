@@ -10,7 +10,8 @@
 <link href="slides_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
-  <meta name="author" content="Émilien Schultz - Julien Boelaert - Étienne Ollion">
+  <meta name="author" content="Émilien Schultz - Julien Boelaert - Étienne Ollion CREST/GENES">
+  <meta name="dcterms.date" content="2025-05-27">
   <title>Active Tigger</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -332,113 +333,101 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Émilien Schultz - Julien Boelaert - Étienne Ollion 
+Émilien Schultz - Julien Boelaert - Étienne Ollion<br>
+<em>CREST/GENES</em> 
 </div>
 </div>
 </div>
 
+  <p class="date">2025-05-27</p>
 </section>
-<section id="constat-de-départ" class="slide level2">
-<h2>Constat de départ</h2>
+<section id="constat-réccurent-de-départ" class="slide level2">
+<h2>Constat (réccurent) de départ</h2>
 <ul>
-<li><em>Croissance</em> des pratiques numériques en sciences sociales
-<ul>
-<li>Importance d’outiller / clarifier ces dimensions CSS</li>
-</ul></li>
 <li><em>Abondance</em> de données textuelles
 <ul>
-<li>Coût important (humain/argent)</li>
-<li>Corpus déséquilibrés (événements rares)</li>
+<li>Traitement humain coûteux &amp; peu reproductible</li>
+</ul></li>
+<li>Enjeu général d’<em>outiller</em> les sciences sociales en NLP
+<ul>
+<li>Réfléchir &amp; stabiliser les bonnes pratiques numériques</li>
 </ul></li>
 <li>Arrivée des <em>modèles pré-entraînés</em>
 <ul>
-<li>Transformers (BERT en 2018)</li>
-<li>(update) le zéro-shot et les modèles multi-tâches</li>
+<li>Nouvelles perspectives &amp; méthodes</li>
 </ul></li>
 </ul>
 </section>
-<section id="saugmenteraugmented" class="slide level2">
-<h2>S’augmenter”<sup>1</sup></h2>
+<section id="arrivée-des-modèles-pré-entrainés" class="slide level2">
+<h2>Arrivée des modèles pré-entrainés</h2>
 <ul>
-<li><em>Déléguer</em> les tâches automatisables avec une qualité suffisante</li>
-<li><em>Étendre</em> sur des corpus plus larges</li>
-<li><em>Accompagner</em> les bonnes pratiques dans des outils</li>
-</ul>
-<blockquote>
-<p>« Even on complex tasks, a well-trained supervised model […] can equal, and sometimes even surpass human annotation » [Do et al., 2022, p.&nbsp;6]</p>
-</blockquote>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>Do, Salomé, Etienne Ollion, et Rubing Shen. «&nbsp;The Augmented Social Scientist&nbsp;». Sociological Methods and Research, 2022.</p></li></ol></aside></section>
-<section id="active-tigger-logiciel-open-source-pour-la-recherche-en-shs" class="slide level2">
-<h2>Active Tigger : logiciel open source pour la recherche en SHS</h2>
+<li>Transformers (BERT en 2018)
 <ul>
-<li>Tâches principales :
-<ul>
-<li><strong>Faciliter</strong> l’annotation multi-classes de corpus textuels (heuristique)</li>
-<li><strong>Accélérer</strong> cette annotation sur de grands corpus textuels (active)</li>
+<li>Représentations contextuelles</li>
 </ul></li>
-<li>Tâches secondaires :
+<li>Modèles fondationnels
 <ul>
-<li>Explorer un corpus abondant</li>
-<li>Collaborer sur l’annotation</li>
-<li>Faciliter la stabilisation des schèmes de codage</li>
-<li>Accélérer la constitution de sous-corpus</li>
+<li>Possibilité de <em>Prompt-engineering</em></li>
+</ul></li>
+</ul>
+<p>Conséquences :</p>
+<ul>
+<li>Nouveaux usages (contextualisation, prompt-engineering)</li>
+<li>Nouveaux problèmes (ouverture, reproductibilité, archivage)</li>
+</ul>
+</section>
+<section id="quels-modèles" class="slide level2">
+<h2>Quels modèles ?</h2>
+<p><strong>La question</strong> : LLM unique ou modèles spécialisés</p>
+<ul>
+<li>Bonne performance des modèles pré-entraînés fine-tunés pour la classification</li>
+<li>Permettre une infrastructure frugale
+<ul>
+<li>diffusion</li>
+<li>versionnement</li>
+<li>coût énergatique</li>
+</ul></li>
+</ul>
+<p>Et intégrer si possible les aspects plus avancés</p>
+</section>
+<section id="active-tigger" class="slide level2">
+<h2>Active Tigger</h2>
+<ul>
+<li>Objectifs principaux :
+<ul>
+<li><strong>Faciliter</strong> l’annotation manuelle de corpus de textes</li>
+<li><strong>Accélérer</strong> cette annotation en entraînant des classifieurs</li>
+</ul></li>
+<li>Objectifs secondaires :
+<ul>
+<li><strong>Explorer</strong> de corpus</li>
+<li><strong>Collaborer</strong> sur l’annotation</li>
+<li><strong>Expérimenter</strong> averc le génératif</li>
 </ul></li>
 </ul>
 </section>
 <section id="valeurs-structurantes-du-projet" class="slide level2">
 <h2>Valeurs structurantes du projet</h2>
 <ul>
+<li>Tourné vers la recherche en SHS</li>
 <li>Open source &amp; Open Science</li>
-<li>Logiciel scientifique</li>
 <li>Transparent / reproductible</li>
-<li>Équilibre entre normativité &amp; modularité</li>
-<li>Ancré dans la recherche (évolutif)</li>
+<li>Evolutif</li>
 </ul>
 <blockquote>
 <p><em>« models and software are entangled in science, and software does critical work that models cannot perform on their own » [Hocquet et al., 2024, p.&nbsp;465]</em></p>
 </blockquote>
 </section>
-<section id="choix-techniques-actuels" class="slide level2">
-<h2>Choix techniques actuels</h2>
+<section id="dautres-solutions-existent" class="slide level2">
+<h2>D’autres solutions existent</h2>
 <ul>
-<li>Tâches délimitées</li>
-<li>Implémenter une méthode <a href="https://en.wikipedia.org/wiki/Active_learning_(machine_learning)">active learning</a>
-<ul>
-<li>Annotation avec boucle d’AL</li>
-<li>Fine-tune BERT + rétroaction (&gt; zero-shot, cf.&nbsp;Chae &amp; Davidson, 2024)</li>
-<li>Étendre sur le corpus entier</li>
-</ul></li>
+<li>Doccano</li>
+<li>Inception</li>
+<li>Prodigy</li>
+<li>Label studio</li>
+<li>…</li>
 </ul>
-<div title="Active Learning">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Active Learning</strong></p>
-</div>
-<div class="callout-content">
-<p>Active learning aims to reduce the number of training instances. In contrast to filtering, it is applied during data collection (instead of after) to only annotate the most helpful or useful instances for training (Settles, 2012; Ren et al., 2021b). i.e.&nbsp;to assess usefulness of an instance without knowing its actual label, one can use the model uncertainty—assuming that labeling instances with the highest uncertainty is most helpful</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="précisions" class="slide level2">
-<h2>Précisions</h2>
-<ul>
-<li>Transformer le texte en features
-<ul>
-<li>Plongement SBERT / autre</li>
-</ul></li>
-<li>AL adapté :
-<ul>
-<li>Modèle frugal (ML classique) avec réintégration des prédictions</li>
-<li>Petits batch</li>
-</ul></li>
-<li>Calcul de métriques et décisions laissés à l’utilisateur</li>
-</ul>
+<p><strong>Pari d’un outil modulable permettant l’expérimentation</strong> ; <em>État des lieux à venir avec TIPS-IA</em></p>
 </section>
 <section id="implémentation-prototype-rshiny-2022atshiny" class="slide level2">
 <h2>Implémentation : prototype RShiny 2022<sup>1</sup></h2>
@@ -452,7 +441,56 @@
 </div><div class="column" style="width:60%;">
 <p><img data-src="img/atr.png"></p>
 </div></div>
-<aside><ol class="aside-footnotes"><li id="fn2"><p>https://gitlab.univ-lille.fr/julien.boelaert/activetigger</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>https://gitlab.univ-lille.fr/julien.boelaert/activetigger</p></li></ol></aside></section>
+<section id="depuis-2024-refactorisation" class="slide level2">
+<h2>Depuis 2024 : refactorisation</h2>
+<p>Consolider l’architecture</p>
+<ul>
+<li>Ajouter du multi-utilisateur</li>
+<li>Aller au-delà du prototype</li>
+<li>Produire du code maintenable</li>
+</ul>
+<div title="Architecture">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Architecture</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Backend (FASTAPI)</li>
+<li>Client web (React)</li>
+<li>Client Python</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="choix-actuels" class="slide level2">
+<h2>Choix actuels</h2>
+<ul>
+<li>Tâches délimitées : classification, un peu d’exploration</li>
+<li>Implémenter une méthode <a href="https://en.wikipedia.org/wiki/Active_learning_(machine_learning)">active learning</a>
+<ul>
+<li>Annotation avec boucle d’AL</li>
+<li>Fine-tuning small model (BERT, 0.12B) + rétroaction (&gt; zero-shot, cf.&nbsp;Chae &amp; Davidson, 2024)</li>
+<li>Étendre sur le corpus entier</li>
+</ul></li>
+<li>Plein de “sucre” pour les pratiques SHS</li>
+</ul>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+
+<img data-src="img/at_diagram.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+
+<img data-src="img/genrerevues.png" class="r-stretch"></section>
 <section id="exemple-dusage" class="slide level2">
 <h2>Exemple d’usage</h2>
 <p>Ollion &amp; Boelaert : <em>La place du genre dans les sciences sociales</em></p>
@@ -469,85 +507,42 @@
 <p><img data-src="img/evogenre.png"></p>
 </div></div>
 </section>
-<section id="section" class="slide level2">
+<section id="section-2" class="slide level2">
 <h2></h2>
 
-<img data-src="img/genrerevues.png" class="r-stretch"></section>
-<section id="depuis-2024-refactorisation" class="slide level2">
-<h2>Depuis 2024 : refactorisation</h2>
-<p>Consolider l’architecture</p>
-<ul>
-<li>Ajouter du multiutilisateur</li>
-<li>Avoir un backend en Python</li>
-<li>Aller au-delà du prototypage</li>
-</ul>
-<div title="Refactorisation">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Refactorisation</strong></p>
-</div>
-<div class="callout-content">
-<ul>
-<li>Python pour le backend (FASTAPI)</li>
-<li>Client dédié (React)</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<p><em>Un chantier encore en cours</em></p>
-</section>
-<section id="structure" class="slide level2">
-<h2>Structure</h2>
-<p>Projet &gt; données &gt; annotations &gt; modèle &gt; prédictions</p>
-
-<img data-src="img/at_diagram.png" class="r-stretch"></section>
+<img data-src="img/at_annotate2.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="démo---at-en-version-beta" class="slide level2">
 <h2>Démo - AT en version beta</h2>
+<p>Développement en intégration continue avec des primo-utilisateurs</p>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
-<li>Une instance sur nos serveurs (GENES)</li>
-<li>Un jeu de données Genre</li>
-<li>Faire le tour des outils</li>
+<li>Accès temporaires pour tester</li>
+<li><a href="https://emilienschultz.github.io/activetigger/">Quickstart</a> en cours de rédaction</li>
+<li>Discord pour échanger</li>
+<li>Formations à venir</li>
 </ul>
-<center>
-<a href="https://emilienschultz.github.io/activetigger"><strong>go go démo</strong> ✅</a>
-</center>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/betatest2.jpg" class="quarto-figure quarto-figure-center" width="400"></p>
+</figure>
+</div>
+</div></div>
 </section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-
-<img data-src="img/at_annotate.png" class="r-stretch"></section>
-<section id="roadmap-scientifique" class="slide level2">
-<h2>Roadmap scientifique</h2>
+<section id="calendrier-prévisionnel" class="slide level2">
+<h2>Calendrier prévisionnel</h2>
 <ul>
-<li>LLM-as-a-service (prompts &amp; rectification)</li>
-<li>Bonnes pratiques de constitution de corpus (Klie et al., 2024)</li>
-<li>Étendre les modèles (<a href="https://arxiv.org/abs/2404.14219">Phi3</a>) ?</li>
-<li>Différencier les rôles (recherche/annotation)</li>
-<li>Établir des comparatifs avec d’autres méthodes</li>
+<li>juin/juillet 2025 : version stable Docker</li>
+<li>décembre 2025 : version intégrant la collaboration + une documentation améliorée (Progédo)</li>
+<li>juillet 2026 : intégration du non supervisé + pipeline 0-shot</li>
 </ul>
-</section>
-<section id="roadmap-technique" class="slide level2">
-<h2>Roadmap technique</h2>
+<p>Et des expérimentations :</p>
 <ul>
-<li>Gestion mémoire GPU (leak &amp; limites)</li>
-<li>Améliorer les visualisations</li>
-<li>Améliorer design/chart graphique</li>
-<li>Écrire la documentation</li>
-<li>Migration PostGreSQL</li>
-<li>Meilleure gestion des processus (Celery)</li>
-<li>Dockeriser</li>
+<li>favoriser le lien AT &amp; Hugging Face</li>
+<li>autres modèles</li>
+<li>optimisation d’hyperparamètres…</li>
 </ul>
-</section>
-<section id="vous-voulez-tester-super" class="slide level2">
-<h2>Vous voulez tester ? Super !</h2>
-<center>
-<img data-src="img/betatest2.jpg" height="500">
-</center>
 </section>
 <section id="comment-contribuer" class="slide level2">
 <h2>Comment contribuer ?</h2>
@@ -561,6 +556,15 @@
 <li><strong>Quelles features à ajouter ?</strong></li>
 </ul>
 </section>
+<section id="démo" class="slide level2">
+<h2>Démo</h2>
+<ul>
+<li><strong>Comptes</strong> : <code>progedo{1-10}/progedo{1-10}</code></li>
+<li><strong>Données</strong> : <a href="https://github.com/emilienschultz/activetigger-presentation">thèses en “socio” depuis années 2000</a></li>
+<li><strong>Objectif</strong> : Entrainer un classifieur qui permet de détecter les thèses utilisant des approches dites “quantitatives”</li>
+</ul>
+<p><a href="https://emilienschultz.github.io/activetigger"><strong>go go</strong> ✅</a></p>
+</section>
 <section id="quelques-références" class="slide level2">
 <h2>Quelques références</h2>
 <ul>
@@ -572,22 +576,10 @@
 </section>
 <section id="contributeurs" class="slide level2">
 <h2>Contributeurs</h2>
-<p>Financement : GENES / DRARI / Progédo</p>
-<ul>
-<li>Julien Boaelaert</li>
-<li>Étienne Ollion</li>
-<li>Paul Girard (OuestWare)</li>
-<li>Emma Bonutti</li>
-<li>Léo Mignot</li>
-</ul>
-<p><a href="www.css.cnrs.fr">www.css.cnrs.fr</a></p>
-<!-- 
-Keywords
-- multiclass classification
-- active learning
-- open source
-- open science
--->
+<p><a href="https://www.css.cnrs.fr/active-tigger/">https://www.css.cnrs.fr/active-tigger/</a></p>
+<p><strong>Financement</strong> : GENES / DRARI / Progédo</p>
+<p><img data-src="img/crest.png" width="100"> <img data-src="img/ministereesr.png" width="100"> <img data-src="img/logo_progedo.svg" width="100"></p>
+<p><strong>Contributeurs</strong> : Julien Boaelaert (UL) ; Étienne Ollion (CREST) ; Paul Girard (OuestWare) ; Emma Bonutti (CREST) ; Annina Claesson (CREST) ; Léo Mignot (CED) ; Jule Brion (PACTE) ; Arnault Chatelain (CREST) ; Axel Morin (CREST)</p>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
