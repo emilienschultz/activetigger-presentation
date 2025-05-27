@@ -1,3 +1,1 @@
-# Présentation d'Active Tigger
-
-En français : https://emilienschultz.github.io/activetigger-presentation
+[Slides](https://emilienschultz.github.io/activetigger-presentation/#/title-slide)
